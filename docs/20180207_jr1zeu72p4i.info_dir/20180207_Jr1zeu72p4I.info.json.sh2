@@ -1,0 +1,54 @@
+#!/bin/bash
+
+rm -f \
+    20180207_Jr1zeu72p4I.info.json.vo.* \
+    20180207_Jr1zeu72p4I.info.json.ao.* \
+    20180207_Jr1zeu72p4I.info.json.bo.* \
+    20180207_Jr1zeu72p4I.info.json.wav 
+
+rm -fr               20180207_Jr1zeu72p4I.info_dir
+mkdir -p             20180207_Jr1zeu72p4I.info_dir
+mv 20180207_Jr1zeu72p4I.info.json 20180207_Jr1zeu72p4I.info.json.*         20180207_Jr1zeu72p4I.info_dir/
+
+
+
+mv  20180207_Jr1zeu72p4I.info_dir/20180207_Jr1zeu72p4I.info.json.jpg 20180207_Jr1zeu72p4I.info_dir/20180207_Jr1zeu72p4I.info.json.mp4.jpg
+
+cat > 20180207_Jr1zeu72p4I.info_dir/_index.md << EOF3
++++
+title = " 20180207_Jr1zeu72p4I 平论Hot | 恶搞版“黄河大合唱”走红的背后 2018-02-07 "
+description = " 恶搞版“黄河大合唱”不光成为企业年会的表演曲目，也在互联网上广为传播走红，新华社和人民日报开始出面严厉批评，公众褒贬不一。 "
+weight = 20
++++
+
+{{< mymp4 mp4="20180207_Jr1zeu72p4I.info.json.mp4" 
+text="len $(cat 20180207_Jr1zeu72p4I.info_dir/20180207_Jr1zeu72p4I.info.json.mp4|wc -c)"
+>}}
+
+{{< mymp4x  mp4x="20180207_Jr1zeu72p4I.info.json.25k.mp4"
+text="len $(cat 20180207_Jr1zeu72p4I.info_dir/20180207_Jr1zeu72p4I.info.json.25k.mp4|wc -c)"
+>}}
+
+
+{{< mydiv text="恶搞版“黄河大合唱”不光成为企业年会的表演曲目，也在互联网上广为传播走红，新华社和人民日报开始出面严厉批评，公众褒贬不一。" >}}
+<br>
+
+{{< mydiv text="https://www.youtube.com/watch?v=Jr1zeu72p4I" >}}
+
+
+<br>
+
+请大家传播时，不需要传播文件本身，<br>
+原因是：一旦传播过大东西（例如，图片，文件），<br>
+就会触发检查机制。<br>
+我不知道检查机制的触发条件。<br>
+但是我知道，不会说你传一个没有敏感词的网络地址都检查，<br>
+否则，检查员得累死。<br><br>
+直接转发网址就可以了：<br>
+原因是，这是程序员网站，<br>
+共匪不敢封锁，墙内可以直接下载。
+
+
+EOF3
+
+

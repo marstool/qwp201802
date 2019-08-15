@@ -1,0 +1,54 @@
+#!/bin/bash
+
+rm -f \
+    20180129_GpbcodF_aHI.info.json.vo.* \
+    20180129_GpbcodF_aHI.info.json.ao.* \
+    20180129_GpbcodF_aHI.info.json.bo.* \
+    20180129_GpbcodF_aHI.info.json.wav 
+
+rm -fr               20180129_GpbcodF_aHI.info_dir
+mkdir -p             20180129_GpbcodF_aHI.info_dir
+mv 20180129_GpbcodF_aHI.info.json 20180129_GpbcodF_aHI.info.json.*         20180129_GpbcodF_aHI.info_dir/
+
+
+
+mv  20180129_GpbcodF_aHI.info_dir/20180129_GpbcodF_aHI.info.json.jpg 20180129_GpbcodF_aHI.info_dir/20180129_GpbcodF_aHI.info.json.webm.mp4.jpg
+
+cat > 20180129_GpbcodF_aHI.info_dir/_index.md << EOF3
++++
+title = " 20180129_GpbcodF_aHI VOA时事大家谈：美国政府关门能凸显中国极权政治的优越性吗？2018-01-29 "
+description = " VOA主持人：林峰_嘉宾：秦伟平  洪振快__美国政府关闭三天之后，参众两院终于通过一份为期三周的临时拨款法案，以维持美国联邦政府运转至２月８日，但政府关门的阴影显然还没有最终散去。连日来，新华社多次发文，指美国政府关门凸显美国政治极化加剧的现实，“反映出美国政府治理能力下降、政治信用透支的深层次问题。”另有社评将美国政府关门同西方民主制危机连在一起，称美国的政治现实将使得世界上愈来愈多的人们“反思这种混乱的政治制度的可行性以及合法性”。政府频频关门，华盛顿到底哪个环节出了问题？它是不是美国乃至整个西方民主制度的危机？能不能凸显中国极权政治模式的优越性？ "
+weight = 20
++++
+
+{{< mymp4 mp4="20180129_GpbcodF_aHI.info.json.webm.mp4" 
+text="len $(cat 20180129_GpbcodF_aHI.info_dir/20180129_GpbcodF_aHI.info.json.webm.mp4|wc -c)"
+>}}
+
+{{< mymp4x  mp4x="20180129_GpbcodF_aHI.info.json.25k.mp4"
+text="len $(cat 20180129_GpbcodF_aHI.info_dir/20180129_GpbcodF_aHI.info.json.25k.mp4|wc -c)"
+>}}
+
+
+{{< mydiv text="VOA主持人：林峰_嘉宾：秦伟平  洪振快__美国政府关闭三天之后，参众两院终于通过一份为期三周的临时拨款法案，以维持美国联邦政府运转至２月８日，但政府关门的阴影显然还没有最终散去。连日来，新华社多次发文，指美国政府关门凸显美国政治极化加剧的现实，“反映出美国政府治理能力下降、政治信用透支的深层次问题。”另有社评将美国政府关门同西方民主制危机连在一起，称美国的政治现实将使得世界上愈来愈多的人们“反思这种混乱的政治制度的可行性以及合法性”。政府频频关门，华盛顿到底哪个环节出了问题？它是不是美国乃至整个西方民主制度的危机？能不能凸显中国极权政治模式的优越性？" >}}
+<br>
+
+{{< mydiv text="https://www.youtube.com/watch?v=GpbcodF_aHI" >}}
+
+
+<br>
+
+请大家传播时，不需要传播文件本身，<br>
+原因是：一旦传播过大东西（例如，图片，文件），<br>
+就会触发检查机制。<br>
+我不知道检查机制的触发条件。<br>
+但是我知道，不会说你传一个没有敏感词的网络地址都检查，<br>
+否则，检查员得累死。<br><br>
+直接转发网址就可以了：<br>
+原因是，这是程序员网站，<br>
+共匪不敢封锁，墙内可以直接下载。
+
+
+EOF3
+
+
